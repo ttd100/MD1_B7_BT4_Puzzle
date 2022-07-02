@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>b4</title>
+</head>
+<body>
+<img id="anh1" src="img/Gau%201.jpg" height="100"width="600" onclick="chage1()"><br>
+<img id="anh2" src="img/Cat%202.jpg" height="100"width="600" onclick="chage2()"><br>
+<img id="anh3" src="img/Khi%203.jpg" height="100"width="600" onclick="chage3()">
+<script>
+    let count1 = 0;
+    let count2 = 1;
+    let count3 = 2;
+    let img1 = document.getElementById('anh1');
+    let img2 = document.getElementById('anh2');
+    let img3 = document.getElementById('anh3');
+    
+    function chage1() {
+        count1++;
+        if (count1==1){
+            img1.src= 'img/Cat 1.jpg'
+        }else if (count1==2){
+            img1.src='img/Khi 1.jpg'
+        }else {
+            count1=0;
+            img1.src='img/Gau 1.jpg'
+        }
+    }
+    function chage2() {
+        count2++;
+        if (count2==1){
+            img2.src= 'img/Cat 2.jpg'
+        }else if (count2==2){
+            img2.src='img/Khi 2.jpg'
+        }else {
+            count2=0;
+            img2.src='img/Gau 2.jpg'
+        }
+    }function chage3() {
+        count3++;
+        if (count3==1){
+            img3.src= 'img/Cat 3.jpg'
+        }else if (count3==2){
+            img3.src='img/Khi 3.jpg'
+        }else {
+            count3=0;
+            img3.src='img/Gau 3.jpg'
+        }
+        check()
+    }
+    function check() {
+        if ( count1 == count2 && count2 == count3 ) {
+            img1.style.boxShadow='red 4px 4px 9px';
+            img2.style.boxShadow='red 4px 4px 9px';
+            img3.style.boxShadow='red 4px 4px 9px';
+        }else {
+            img1.style.boxShadow='green 4px 4px 9px';
+            img2.style.boxShadow='green 4px 4px 9px';
+            img3.style.boxShadow='green 4px 4px 9px';
+        }
+    }
+</script>
+</body>
+</html>
